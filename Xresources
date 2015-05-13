@@ -1,0 +1,75 @@
+! Base16 Twilight
+! Scheme: David Hart (http://hart-dev.com)
+
+*foreground: #D7D0C7
+*background: #151515
+
+!black
+! *color0:     #AF875F
+! *color8:     #AF875F
+*color0:     #101010
+*color8:     #404040
+!red
+*color1:     #E84F4F
+*color9:     #D23D3D
+!green
+*color2:     #B8D68C
+*color10:    #A0CF5D
+!yellow
+*color3:     #E1AA5D
+*color11:    #F39D21
+!blue
+*color4:     #7DC1CF
+*color12:    #4E9FB1
+!magenta
+*color5:     #9B64FB
+*color13:    #8542FF
+!cyan
+*color6:     #6D878D
+*color14:    #42717B
+!white
+*color7:     #dddddd
+*color15:    #dddddd
+
+URxvt*borderColor:        #151515
+URxvt*colorBD:            #ffffff
+
+URxvt.scrollstyle: plain
+URxvt.scrollBar: off
+
+*font:           -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
+!URxvt*font:         -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-1
+
+URxvt*termName:rxvt-unicode-256color
+URxvt.jumpScroll: false
+*.saveLines: 2000
+URxvt.letterSpace: 0
+
+URxvt*externalBorder: 3
+URxvt.internalBorder: 1
+!URxvt.borderColor: #000030
+
+URxvt*loginShell: true
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: false
+Xft.hinstyle: hintfull
+Xft.lcdfilter: lcddefault
+URxvt*xftAntialias: true
+
+!*mapAlert:         false
+!*visualBell:       galse
+*urgentOnBell:     true
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: false
+URxvt.perl-ext-common: default,clipboard,matcher
+URxvt.urlLauncher: chromium-browser
+URxvt.matcher.button: 1
+
+!xterm*faceName:           Terminus:style=Regular:size=10
+xterm*dynamicColors:      true
+xterm*utf8:               2
+xterm*eightBitInput:      true
+xterm*scrollTtyOutput:    false
+xterm*toolBar:            false

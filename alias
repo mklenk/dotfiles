@@ -1,0 +1,8 @@
+alias src="source ~/.zshrc"
+alias s="sudo"
+alias gs="git status"
+alias gl="git log --oneline --abbrev-commit --all --graph --decorate --color"
+alias sudo="sudo "
+alias cleanBranches="git checkout master && git branch --merged master | egrep -v \"(staging|master)\" | xargs -n 1 git branch -d"
+
+bu() { cp $@ $@.backup-`date +%y%m%d%h%i%s`; }
