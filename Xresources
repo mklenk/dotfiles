@@ -31,18 +31,20 @@
 *color7:     #dddddd
 *color15:    #dddddd
 
+URxvt.saveLines: 2000
+
 URxvt*borderColor:        #151515
 URxvt*colorBD:            #ffffff
 
 URxvt.scrollstyle: plain
 URxvt.scrollBar: off
 
-*font:           -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
+
+URxvt*font:           -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
 !URxvt*font:         -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-1
 
 URxvt*termName:rxvt-unicode-256color
 URxvt.jumpScroll: false
-*.saveLines: 2000
 URxvt.letterSpace: 0
 
 URxvt*externalBorder: 3
@@ -66,10 +68,3 @@ URxvt.iso14755: false
 URxvt.perl-ext-common: default,clipboard,matcher
 URxvt.urlLauncher: chromium-browser
 URxvt.matcher.button: 1
-
-!xterm*faceName:           Terminus:style=Regular:size=10
-xterm*dynamicColors:      true
-xterm*utf8:               2
-xterm*eightBitInput:      true
-xterm*scrollTtyOutput:    false
-xterm*toolBar:            false

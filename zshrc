@@ -8,8 +8,7 @@ export EDITOR=vim
 # ZSH_THEME="robbyrussell"
 #ZSH_THEME="norm"
 ZSH_THEME="sporty_256"
-TERM="xterm-256color"
-#TERM="rxvt-unicode-256color"
+TERM="rxvt-unicode-256color"
 #ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
