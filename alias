@@ -1,5 +1,6 @@
 alias src="source ~/.zshrc"
 alias s="sudo"
+alias a="sudo apt-get"
 alias gs="git status"
 alias gl="git log --oneline --abbrev-commit --all --graph --decorate --color"
 alias sudo="sudo "
