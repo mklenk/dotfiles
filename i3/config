@@ -10,16 +10,24 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $workspace1 1: dev
-set $workspace2 2: terms
-set $workspace3 3: web
-set $workspace4 4: media
-set $workspace5 5: stuff
-set $workspace6 6
-set $workspace7 7
-set $workspace8 8
-set $workspace9 9
-set $workspace10 10
+set $workspace1 "1: dev"
+set $workspace2 "2: terms"
+set $workspace3 "3: web"
+set $workspace4 "4: media"
+set $workspace5 "5: stuff"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
+
+set $default_gaps_inner 0
+set $default_gaps_outer 0
+gaps inner $default_gaps_inner
+gaps outer $default_gaps_outer
+
+workspace $workspace4 gaps inner 15
+workspace $workspace4 gaps outer 30
 
 set $font -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
 # Font for window titles. Will also be used by the bar unless a different font
@@ -31,7 +39,7 @@ font $font
 
 
 exec_always setxkbmap de
-exec_always xrandr --output DP1 --auto --right-of DP2    
+exec_always xrandr --output DP1 --auto --right-of DP2
 exec dunst -config ~/.i3/dunstrc
 exec_always ~/.i3/bin/per-workspace-layout.pl
 
@@ -50,7 +58,7 @@ exec_always ~/.i3/bin/per-workspace-layout.pl
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec rxvt-unicode
+bindsym $mod+Return exec --no-startup-id rxvt-unicode
 
 # lock screen
 bindsym $mod+Ctrl+l exec ~/.i3/bin/i3lock-wrapper
@@ -126,12 +134,13 @@ bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
+bindsym $mod+Tab workspace back_and_forth
 
-workspace "$workspace1" output DP2
+workspace $workspace1 output DP2
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2 
+bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace $workspace5
