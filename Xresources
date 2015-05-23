@@ -40,8 +40,8 @@ URxvt*loginShell: true
 
 URxvt.saveLines: 2000
 
-URxvt*externalBorder: 3
-URxvt.internalBorder: 1
+URxvt*externalBorder: 0
+URxvt.internalBorder: 0
 URxvt*borderColor:        #0a0f14
 URxvt*colorBD:            #ffffff
 
@@ -49,7 +49,9 @@ URxvt.scrollstyle: plain
 URxvt.scrollBar: off
 URxvt.jumpScroll: false
 
-URxvt*font:           -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
+
+URxvt*font: xft:Terminus:pixelsize=12,xft:Inconsolata\ for\ Powerline:pixelsize=12,style=regular
+!URxvt*font: -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
 URxvt.letterSpace: 0
 
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
