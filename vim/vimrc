@@ -15,6 +15,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bling/vim-airline'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'joonty/vim-phpqa.git'
 
 " Color Themes
 Bundle 'flazz/vim-colorschemes'
@@ -35,6 +36,7 @@ set complete-=i
 set showmatch
 set showmode
 set smarttab
+set colorcolumn=120
 
 set nrformats-=octal
 set shiftround
@@ -56,7 +58,7 @@ set wildmenu
 set autoread
 
 set encoding=utf-8
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 set listchars=tab:▒░,trail:▓
 set list
 
@@ -115,6 +117,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='solarized'
+
+" Set the codesniffer args
+let g:phpqa_codesniffer_args = "--colors --standard=Medi"
+
 "
 " Basic shortcuts definitions
 "  most in visual mode / selection (v or ⇧ v)

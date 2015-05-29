@@ -21,13 +21,16 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
 
-set $default_gaps_inner 0
-set $default_gaps_outer 0
-gaps inner $default_gaps_inner
-gaps outer $default_gaps_outer
+#set $default_gaps_inner 15
+#set $default_gaps_outer 0
+#gaps inner $default_gaps_inner
+#gaps outer $default_gaps_outer
+#smart_gaps on
 
-workspace $workspace4 gaps inner 15
-workspace $workspace4 gaps outer 30
+#workspace $workspace5 gaps inner 30
+#workspace $workspace5 gaps outer 30
+#workspace $workspace4 gaps inner 15
+#workspace $workspace4 gaps outer 30
 
 set $font -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
 # Font for window titles. Will also be used by the bar unless a different font
@@ -197,9 +200,9 @@ bar {
     statusline #605c5a
 
     # class            border 	backgrd  text
-    focused_workspace  #161616  #909737  #ffffff
+    focused_workspace  #33859d  #33859d  #ffffff
     active_workspace   #161616 	#161616  #a5a5a5
-    inactive_workspace #161616 	#545454  #a5a5a5
+    inactive_workspace #161616 	#161616  #a5a5a5
     urgent_workspace   #AB0000  #B00000  #ffffff
   }
 }
@@ -216,6 +219,8 @@ assign [class="Pavucontrol"] $workspace5
 assign [class="Pidgin"] $workspace5
 assign [class="^Nuvola"] $workspace4
 
+#smart_borders on
+#for_window [class="^.*"] border pixel 3
 #floating
 #for_window [class="Pidign"] floating enable
 #for_window [class="Pavucontrol"] floating enable
@@ -226,7 +231,7 @@ bindsym Mod1+Print exec scrot -u -e 'mv $f ~/Pictures/Scrot/$f'
 bindsym $mod+Print exec scrot -e 'mv $f ~/Pictures/Scrot/$f && gimp ~/Pictures/Scrot/$f'
 bindsym $mod+Mod1+Print exec scrot -u -e 'mv $f ~/Pictures/Scrot/$f && gimp ~/Pictures/Scrot/$f'
 
-client.focused		#909737	#909737	#ffffff
+client.focused          #33859d #33859d #ffffff
 client.focused_inactive #111111 #111111 #999999
 client.unfocused        #222222 #222222 #999999
 client.urgent           #AB0000 #B00000 #ffffff
