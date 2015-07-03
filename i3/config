@@ -61,6 +61,7 @@ exec_always ~/.i3/bin/per-workspace-layout.pl
 floating_modifier $mod
 
 # start a terminal
+#bindsym $mod+Return exec --no-startup-id gnome-terminal
 bindsym $mod+Return exec --no-startup-id rxvt-unicode
 
 # lock screen
@@ -208,7 +209,7 @@ bar {
 }
 
 #assign application to workspace
-assign [class="URxvt"] $workspace2
+#assign [class="URxvt"] $workspace2
 assign [class="Firefox"] $workspace3
 assign [class="Opera"] $workspace3
 assign [class="Google-chrome"] $workspace3

@@ -1,0 +1,10 @@
+alias gs="git status"
+alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%d%n%Creset%s%n' --graph --date=relative"
+
+alias sudo="sudo "
+
+bu() { cp $@ $@.backup-`date +%y%m%d%h%i%s`; }
+
+if [ -f ~/.sshrc_local ]; then
+    source ~/.sshrc_local
+fi

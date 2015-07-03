@@ -15,6 +15,7 @@
     ~/.fonts: fonts/
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
+    ~/.sshrc: sshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
