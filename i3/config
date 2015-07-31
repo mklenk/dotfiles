@@ -15,7 +15,7 @@ set $workspace2 "2: terms"
 set $workspace3 "3: web"
 set $workspace4 "4: media"
 set $workspace5 "5: stuff"
-set $workspace6 "6"
+set $workspace6 "6: rdp"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
@@ -45,6 +45,8 @@ exec_always setxkbmap de
 exec_always xrandr --output DP1 --auto --right-of DP2
 exec dunst -config ~/.i3/dunstrc
 exec_always ~/.i3/bin/per-workspace-layout.pl
+exec --no-startup-id feh --bg-scale /home/mklenk/Pictures/mxlM8xn.png
+exec xautolock -time 5 -locker '~/.i3/bin/i3lock-wrapper' &
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -61,11 +63,14 @@ exec_always ~/.i3/bin/per-workspace-layout.pl
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec --no-startup-id gnome-terminal
-bindsym $mod+Return exec --no-startup-id rxvt-unicode
+bindsym $mod+Return exec --no-startup-id gnome-terminal
+#bindsym $mod+Return exec --no-startup-id rxvt-unicode
 
 # lock screen
 bindsym $mod+Ctrl+l exec ~/.i3/bin/i3lock-wrapper
+
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -195,16 +200,15 @@ bar {
   position top
   workspace_buttons yes
   status_command i3blocks -c ~/.i3/i3blocks/i3blocks.conf
-
+  # status_command i3status
   colors {
-    background #161616
-    statusline #605c5a
-
-    # class            border 	backgrd  text
-    focused_workspace  #33859d  #33859d  #ffffff
-    active_workspace   #161616 	#161616  #a5a5a5
-    inactive_workspace #161616 	#161616  #a5a5a5
-    urgent_workspace   #AB0000  #B00000  #ffffff
+    separator #dc322f
+    background #002b36
+    statusline #268bd2
+    focused_workspace #fdf6e3 #859900 #fdf6e3
+    active_workspace #fdf6e3 #6c71c4 #fdf6e3
+    inactive_workspace #586e75 #93a1a1 #002b36
+    urgent_workspace #d33682 #d33682 #fdf6e3
   }
 }
 
@@ -219,7 +223,9 @@ assign [class="Sublime"] $workspace1
 assign [class="Pavucontrol"] $workspace5
 assign [class="Pidgin"] $workspace5
 assign [class="^Nuvola"] $workspace4
-
+#assign [title=".*rdesktop.*"] $workspace6; floating disable
+for_window [class="^rdesktop"] move workspace $workspace6; floating disable
+assign [class="Sublime"] $workspace1
 #smart_borders on
 #for_window [class="^.*"] border pixel 3
 #floating
@@ -231,9 +237,9 @@ bindsym Print exec scrot -e 'mv $f ~/Pictures/Scrot/$f'
 bindsym Mod1+Print exec scrot -u -e 'mv $f ~/Pictures/Scrot/$f'
 bindsym $mod+Print exec scrot -e 'mv $f ~/Pictures/Scrot/$f && gimp ~/Pictures/Scrot/$f'
 bindsym $mod+Mod1+Print exec scrot -u -e 'mv $f ~/Pictures/Scrot/$f && gimp ~/Pictures/Scrot/$f'
-
-client.focused          #33859d #33859d #ffffff
-client.focused_inactive #111111 #111111 #999999
-client.unfocused        #222222 #222222 #999999
-client.urgent           #AB0000 #B00000 #ffffff
 client.background       #161616
+
+client.focused #859900 #859900 #fdf6e3 #859900
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f

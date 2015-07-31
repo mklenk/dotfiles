@@ -5,7 +5,7 @@ xset -b
 
 setxkbmap de
 
-xset fp+ ~/.fonts/
+oset fp+ ~/.fonts/
 
 xrandr --output DP1 --auto --right-of DP2
 

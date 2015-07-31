@@ -1,39 +1,73 @@
-! special
-*.foreground:   #98d1ce
-*.background:   #0a0f14
-*.cursorColor:  #98d1ce
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
 
-! black
-*.color0:       #0a0f14
-*.color8:       #10151b
 
-! red
-*.color1:       #c33027
-*.color9:       #d26939
+! Common
 
-! green
-*.color2:       #26a98b
-*.color10:      #123d57
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-! yellow
-*.color3:       #edb54b
-*.color11:      #245361
 
-! blue
-*.color4:       #195465
-*.color12:      #82c2d9
+! Dark
 
-! magenta
-*.color5:       #4e5165
-*.color13:      #888ba5
+#define S_base03        #002b36
+#define S_base02        #002b36
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #93a1a1
+#define S_base1         #93a1a1
+#define S_base2         #93a1a1
+#define S_base3         #fdf6e3
 
-! cyan
-*.color6:       #33859d
-*.color14:      #599caa
 
-! white
-*.color7:       #98d1ce
-*.color15:      #d3ebe9
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+*background:              S_base03
+*foreground:              S_base0
+*fading:                  40
+*fadeColor:               S_base03
+*cursorColor:             S_base1
+*pointerColorBackground:  S_base01
+*pointerColorForeground:  S_base1
+
+*color0:                  S_base02
+*color1:                  S_red
+*color2:                  S_green
+*color3:                  S_yellow
+*color4:                  S_blue
+*color5:                  S_magenta
+*color6:                  S_cyan
+*color7:                  S_base2
+*color9:                  S_orange
+*color8:                  S_base03
+*color10:                 S_base01
+*color11:                 S_base00
+*color12:                 S_base0
+*color13:                 S_violet
+*color14:                 S_base1
+*color15:                 S_base3
 
 URxvt*termName:rxvt-unicode-256color
 URxvt*loginShell: true
@@ -42,8 +76,9 @@ URxvt.saveLines: 2000
 
 URxvt*externalBorder: 0
 URxvt.internalBorder: 0
-URxvt*borderColor:        #0a0f14
-URxvt*colorBD:            #ffffff
+URxvt*borderColor:    S_base03
+! #272822
+URxvt*colorBD:        #ffffff
 
 URxvt.scrollstyle: plain
 URxvt.scrollBar: off
