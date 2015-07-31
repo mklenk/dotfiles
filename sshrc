@@ -1,10 +1,22 @@
+#for TERM in xterm xtermc xterm-color xterm-256color screen rxvt rxvt-unicode-256color
+#do
+#    tput cols >/dev/null 2>/dev/null
+#done
+#export TERM=rxvt
+
+alias sf="php app/console"
+alias phpunit="vendor/phpunit/phpunit/phpunit"
+alias pu="phpunit -c app/"
+alias puf="phpunit -c app/ --filter"
+
+alias phpcs="bin/phpcs --colors --standard=vendor_ext/phpcs/Standards/Medi"
+alias phpcbf="bin/phpcbf --standard=vendor_ext/phpcs/Standards/Medi"
+
 alias gs="git status"
-alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%d%n%Creset%s%n' --graph --date=relative"
+alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%d%n%Creset%B%n' --graph --date=relative"
+alias gls="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%d%n%Creset%s%n' --graph --date=relative"
 
 alias sudo="sudo "
 
 bu() { cp $@ $@.backup-`date +%y%m%d%h%i%s`; }
-
-if [ -f ~/.sshrc_local ]; then
-    source ~/.sshrc_local
-fi
+alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
