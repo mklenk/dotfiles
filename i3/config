@@ -202,13 +202,14 @@ bar {
   status_command i3blocks -c ~/.i3/i3blocks/i3blocks.conf
   # status_command i3status
   colors {
-    separator #dc322f
-    background #002b36
-    statusline #268bd2
-    focused_workspace #fdf6e3 #859900 #fdf6e3
-    active_workspace #fdf6e3 #6c71c4 #fdf6e3
-    inactive_workspace #586e75 #93a1a1 #002b36
-    urgent_workspace #d33682 #d33682 #fdf6e3
+        background #151B21
+        statusline #CEE4FF
+        separator #51c4d4
+
+        focused_workspace  #151B21 #151B21 #00DDFF
+        active_workspace   #151B21 #151B21 #454545
+        inactive_workspace #151B21 #151B21 #ffffff
+        urgent_workspace   #151B21 #151B21 #ffffff
   }
 }
 
@@ -226,8 +227,6 @@ assign [class="^Nuvola"] $workspace4
 #assign [title=".*rdesktop.*"] $workspace6; floating disable
 for_window [class="^rdesktop"] move workspace $workspace6; floating disable
 assign [class="Sublime"] $workspace1
-#smart_borders on
-#for_window [class="^.*"] border pixel 3
 #floating
 #for_window [class="Pidign"] floating enable
 #for_window [class="Pavucontrol"] floating enable
@@ -239,7 +238,7 @@ bindsym $mod+Print exec scrot -e 'mv $f ~/Pictures/Scrot/$f && gimp ~/Pictures/S
 bindsym $mod+Mod1+Print exec scrot -u -e 'mv $f ~/Pictures/Scrot/$f && gimp ~/Pictures/Scrot/$f'
 client.background       #161616
 
-client.focused #859900 #859900 #fdf6e3 #859900
-client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-client.unfocused #073642 #073642 #93a1a1 #586e75
-client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+client.focused #7BC4CD #1B2129 #75D2DA
+client.unfocused #353638 #1B2129 #969696
+client.focused_inactive #262626 #262626 #969696
+client.urgent #51c4d4 #ecedee #51c4d4
