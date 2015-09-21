@@ -2,6 +2,8 @@
 export HOME_LOCAL=/home/mklenk
 export ZSH=$HOME_LOCAL/.oh-my-zsh
 export EDITOR=vim
+export HISTFILE=~/.zsh_history
+export HH_CONFIG=hicolor
 # Set name of the theme to load.
 # Look in $HOME_LOCAL/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -11,7 +13,7 @@ export EDITOR=vim
 #ZSH_THEME="sporty_256"
 #ZSH_THEME="daveverwer"
 #TERM="xterm"
-ZSH_THEME="avit"
+ZSH_THEME="fishy"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

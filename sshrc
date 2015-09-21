@@ -5,9 +5,10 @@
 #export TERM=rxvt
 
 alias sf="php app/console"
-alias phpunit="vendor/phpunit/phpunit/phpunit"
-alias pu="phpunit -c app/"
-alias puf="phpunit -c app/ --filter"
+alias phpunit="bin/phpunit"
+alias pu="phpunit -c app/phpunit.xml.dist"
+alias puf="phpunit -c app/phpunit.xml.dist --filter"
+
 
 alias phpcs="bin/phpcs --colors --standard=vendor_ext/phpcs/Standards/Medi"
 alias phpcbf="bin/phpcbf --standard=vendor_ext/phpcs/Standards/Medi"
@@ -15,6 +16,7 @@ alias phpcbf="bin/phpcbf --standard=vendor_ext/phpcs/Standards/Medi"
 alias gs="git status"
 alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%d%n%Creset%B%n' --graph --date=relative"
 alias gls="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%d%n%Creset%s%n' --graph --date=relative"
+alias gu="git reset HEAD"
 
 alias sudo="sudo "
 
